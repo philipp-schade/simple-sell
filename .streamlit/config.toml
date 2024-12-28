@@ -2,4 +2,4 @@
 backgroundColor = "white"
 
 [client]
-#toolbarMode = "minimal"
+toolbarMode = "minimal"
