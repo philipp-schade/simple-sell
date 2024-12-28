@@ -1,0 +1,20 @@
+# Environments
+.env
+.venv
+
+# Secrets
+secrets.toml
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Python cache
+__pycache__/
+
+# IDE files
+.vscode/

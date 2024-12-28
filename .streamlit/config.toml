@@ -1,0 +1,5 @@
+[theme]
+backgroundColor = "white"
+
+[client]
+#toolbarMode = "minimal"
