@@ -10,6 +10,7 @@ def format_excel_file(input_file, output_file):
     wb = openpyxl.load_workbook(input_file)
     sheet = wb.active
 
+
     # Keep columns A, E, G and remove others
     columns_to_keep = [1, 5, 7]  # Corresponding to A, E, G
     all_columns = list(range(1, sheet.max_column + 1))
@@ -108,7 +109,14 @@ def format_excel_file(input_file, output_file):
                     top=Side(border_style="thick")
                 )
 
-           
+    # Delete columns
+    sheet.delete_cols(2, 3)
+    sheet.delete_cols(3, 1)
+    sheet.delete_cols(4, 1)
+    
+    # Add a filter to the sheet
+    sheet.auto_filter.ref = sheet.dimensions
+
     # Save the formatted file
     wb.save(output_file)
 
