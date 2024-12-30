@@ -9,6 +9,7 @@ SimpleSell Formatter is a Streamlit web application that allows users to upload 
   - Deleting specific columns (B, C, D, F)
   - Center-aligning the "order_item_quantity" column
   - Formatting "order_item_sku" entries with "4S" in bold
+  - Formatting "order_item_sku" entries with "-2-" in bold
   - Formatting "order_item_sku" entries with "6S" in italics and underlined
   - Highlighting rows with "order_item_quantity" > 1 in light blue
   - Drawing a bold box around rows with the same reference code
@@ -21,8 +22,12 @@ SimpleSell Formatter is a Streamlit web application that allows users to upload 
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/simplesell-formatter.git
-   cd simplesell-formatter
+   git clone https://github.com/philipp-schade/simple-sell.git
+   cd simple-sell
    
-2. Create and activate a virtual environment:
+2. Create and activate a virtual environment
+
+3. Run the app with:
+    ```sh
+   streamlit run app.py
     
