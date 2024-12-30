@@ -1,8 +1,4 @@
 import streamlit as st
-import openpyxl
-import hmac
-import streamlit_authenticator as stauth
-from io import BytesIO
 from formatter import format_excel_file
 from auth import check_password
 
@@ -12,7 +8,6 @@ st.set_page_config(
     page_icon="images/favicon.png",
     layout="wide",
 )
-
 
 # Set images and favicon
 LOGO = "images/GentleNorth.jpg"

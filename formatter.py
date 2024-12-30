@@ -1,6 +1,5 @@
 import openpyxl
 from openpyxl.styles import Alignment, Font, PatternFill, Border, Side
-from openpyxl.utils import get_column_letter
 
 def format_excel_file(input_file, output_file):
     # Load the unformatted Excel file

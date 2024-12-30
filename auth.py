@@ -1,6 +1,5 @@
 import streamlit as st
 import hmac
-import streamlit_authenticator as stauth
 
 # Add a simple authentication mechanism
 # Check: https://docs.streamlit.io/knowledge-base/deploy/authentication-without-sso
