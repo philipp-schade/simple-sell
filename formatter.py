@@ -85,6 +85,10 @@ def format_excel_file(input_file, output_file):
     # Add a filter to the sheet
     sheet.auto_filter.ref = sheet.dimensions
 
+    # Center-align the header row (assumed to be the first row)
+    for cell in sheet[1]:  # sheet[1] refers to the first row
+        cell.alignment = Alignment(horizontal="center")
+
     # Save the formatted file
     wb.save(output_file)
 
