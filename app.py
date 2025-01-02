@@ -1,4 +1,5 @@
 import streamlit as st
+import datetime
 from formatter import format_excel_file
 from auth import check_password
 
@@ -31,8 +32,11 @@ if uploaded_file is not None:
         with open(input_file, "wb") as f:
             f.write(uploaded_file.getbuffer())
         
-        # Define the output file
-        output_file = "formatted_file.xlsx"
+        # Get the current date in the format dd-mm-yyyy
+        current_date = datetime.datetime.now().strftime("%d-%m-%Y")
+        
+        # Define the output file name with the date
+        output_file = f"formatted_file_{current_date}.xlsx"
         
         # Run the formatter
         format_excel_file(input_file, output_file)
@@ -45,9 +49,10 @@ if uploaded_file is not None:
         st.download_button(
             label="Download formatted file",
             data=formatted_data,
-            file_name="formatted_file.xlsx",
+            file_name=output_file,
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
+
 
 
 # Add custom CSS for the footer
