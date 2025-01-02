@@ -3,3 +3,7 @@ backgroundColor = "white"
 
 [client]
 toolbarMode = "minimal"
+
+[server]
+enableXsrfProtection = false
+enableCORS = false
