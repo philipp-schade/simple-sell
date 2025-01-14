@@ -52,7 +52,7 @@ def format_excel_file(input_file, output_file):
     # Highlight rows with "ANZAHL" > 1 in light blue
     for row in range(2, sheet.max_row + 1):  # Skip header row
         quantity_cell = sheet.cell(row=row, column=2)  # Column E
-        if quantity_cell.value and quantity_cell.value > 1:
+        if quantity_cell.value and str(quantity_cell.value).isdigit() and int(quantity_cell.value) > 1:
             fill = PatternFill(start_color="ADD8E6", end_color="ADD8E6", fill_type="solid")
             for col in range(1, sheet.max_column + 1):
                 sheet.cell(row=row, column=col).fill = fill
@@ -91,4 +91,3 @@ def format_excel_file(input_file, output_file):
 
     # Save the formatted file
     wb.save(output_file)
-
